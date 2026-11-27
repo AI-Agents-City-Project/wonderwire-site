@@ -18,7 +18,7 @@
 <p id="manual" hidden>If nothing happens, make sure the app is running, then <a id="link" href="#">continue</a>.</p>
 <script>
   // TikTok sends the login here (an https address it accepts); the office on this computer finishes it.
-  var target = "http://localhost:3000/api/reels/tiktok/callback" + location.search;
+  var target = "http://localhost:3000/tiktok/callback" + location.search;
   document.getElementById("link").href = target;
   document.getElementById("manual").hidden = false;
   location.replace(target);
