@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Connecting Instagram · Wonderwire</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f7f5f0; --fg: #1d1b18; --accent: #9a7a3c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0f0f10; --fg: #efe9df; --accent: #d4b56a; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 64px 16px; } a { color: var(--accent); }
+</style>
+</head>
+<body><main>
+<h1>Connecting Instagram…</h1>
+<p>Returning to the Wonderwire app on this computer.</p>
+<p id="manual" hidden>If nothing happens, make sure the app is running, then <a id="link" href="#">continue</a>.</p>
+<script>
+  var target = "http://localhost:3000/instagram/callback" + location.search;
+  document.getElementById("link").href = target;
+  document.getElementById("manual").hidden = false;
+  location.replace(target);
+</script>
+</main></body>
+</html>
